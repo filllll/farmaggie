@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- font files -->
- <link href="{{ URL::asset('https://fonts.googleapis.com/css?family=Athiti') }}" rel="stylesheet">
+<link href="{{ URL::asset('https://fonts.googleapis.com/css?family=Athiti') }}" rel="stylesheet">
  <!-- /font files -->
 <!-- css files -->
 <link href="{{ URL::asset('css/style.css') }}" rel='stylesheet' type='text/css' media="all" />
@@ -218,15 +218,15 @@
 						</div>
 	          			<div class="form-control">
 							<label class="header">สร้างรหัสผ่าน <span>*</span></label>
-							<input type="password" id="pass" name="pass" placeholder="รหัสผ่าน" title="โปรดกรอกรหัสผ่าน" required>
+							<input type="password" id="name" name="pass" placeholder="รหัสผ่าน" title="โปรดกรอกรหัสผ่าน" required>
 						</div>
 	           			<div class="form-control">
 							<label class="header">ยืนยันรหัสผ่าน <span>*</span></label>
-							<input type="password" id="pass2" name="pass2" placeholder="ยืนยันรหัสผ่าน" title="โปรดกรอกรหัสผ่าน" required>
+							<input type="password" id="name" name="pass2" placeholder="ยืนยันรหัสผ่าน" title="โปรดกรอกรหัสผ่าน" required>
 						</div>
 						<div class="form-control">
 							<label class="header">เบอร์โทรศัพท์ <span>*</span></label>
-							<input type="text" id="mobile" name="mobile" placeholder="081-xxx-xxxx" title="โปรดกรอกเบอร์โทรศัพท์" required>
+							<input type="text" id="name" name="mobile" placeholder="081-xxx-xxxx" title="โปรดกรอกเบอร์โทรศัพท์" required>
 						</div>
 
 					</div>
@@ -456,22 +456,22 @@
 							<label class="rating">สถานภาพ<span>*</span></label>
 							<ul>
 								<li>
-									<input type="radio" id="a-option" name="โสด">
+									<input type="radio" id="a-option" name="option" value="โสด">
 									<label for="a-option">โสด </label>
 									<div class="check"></div>
 								</li>
 								<li>
-									<input type="radio" id="b-option" name="สมรส">
+									<input type="radio" id="b-option" name="option" value="สมรส">
 									<label for="b-option">สมรส</label>
 									<div class="check"><div class="inside"></div></div>
 								</li>
 								<li>
-									<input type="radio" id="c-option" name="หย่าร้าง">
+									<input type="radio" id="c-option" name="option" value="หย่าร้าง">
 									<label for="c-option">หย่าร้าง</label>
 									<div class="check"><div class="inside"></div></div>
 								</li>
 								<li>
-									<input type="radio" id="d-option" name="ม่าย">
+									<input type="radio" id="d-option" name="option" value="ม่าย">
 									<label for="d-option">ม่าย</label>
 									<div class="check"></div>
 								</li>
@@ -487,16 +487,16 @@
 				<div class="w3ls-btn">
 					<div class="form-control">
 						<label class="header">ที่อยู่ที่สามารถติดต่อได้<span>*</span></label>
-						<input type="text" id="add_no" name="add_no" placeholder="เลขที่" title="โปรดกรอกเลขที่สำหรับที่อยู่" required="">
-						<input type="text" id="add_moo" name="add_moo" placeholder="หมู่" title="โปรดกรอกหมู่" required="">
-						<input type="text" id="add_soi" name="add_soi" placeholder="ซอย/ตรอก" title="โปรดกรอกซอย/ตรอก" required="">
-						<input type="text" id="add_road" name="add_road" placeholder="ถนน" title="โปรดกรอกถนน" required="">
-						<input type="text" id="add_dist" name="add_dist" placeholder="อำเภอ/เขต" title="โปรดกรอกอำเภอ/เขต" required="">
-						<input type="text" id="add_subdist" name="add_subdist" placeholder="ตำบล/แขวง" title="โปรดกรอกตำบล/แขวง" required="">
-						<input type="text" id="add_province" name="add_province" placeholder="จังหวัด" title="โปรดกรอกจังหวัด" required="">
-						<input type="text" id="add_zip" name="add_zip" placeholder="รหัสไปรษณีย์" title="โปรดกรอกรหัสไปรษณีย์" required="">
-						<input type="text" id="add_face" name="add_face" placeholder="ชื่อบัญชี Facebook">
-						<input type="text" id="add_line" name="add_line" placeholder="ชื่อไอดี Line">
+						<input type="text" id="address" name="add_no" placeholder="เลขที่" title="โปรดกรอกเลขที่สำหรับที่อยู่" required="">
+						<input type="text" id="address" name="add_moo" placeholder="หมู่" title="โปรดกรอกหมู่" required="">
+						<input type="text" id="address" name="add_soi" placeholder="ซอย/ตรอก" title="โปรดกรอกซอย/ตรอก" required="">
+						<input type="text" id="address" name="add_road" placeholder="ถนน" title="โปรดกรอกถนน" required="">
+						<input type="text" id="address" name="add_dist" placeholder="อำเภอ/เขต" title="โปรดกรอกอำเภอ/เขต" required="">
+						<input type="text" id="address" name="add_subdist" placeholder="ตำบล/แขวง" title="โปรดกรอกตำบล/แขวง" required="">
+						<input type="text" id="address" name="add_province" placeholder="จังหวัด" title="โปรดกรอกจังหวัด" required="">
+						<input type="text" id="address" name="add_zip" placeholder="รหัสไปรษณีย์" title="โปรดกรอกรหัสไปรษณีย์" required="">
+						<input type="text" id="address" name="add_face" placeholder="ชื่อบัญชี Facebook">
+						<input type="text" id="address" name="add_line" placeholder="ชื่อไอดี Line">
 					</div>
 				</div>
 

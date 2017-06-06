@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/tasks', function () {
-    
+
 	//$tasks = DB::table('tasks')->get();
 	$tasks = Task::all();
 
@@ -26,7 +26,7 @@ Route::get('/tasks', function () {
 });
 
 Route::get('tasks/{task}', function ($id) {
-    
+
 	//$task = DB::table('tasks')->find($id);
 	$task = Task::find($id);
 
@@ -34,6 +34,11 @@ Route::get('tasks/{task}', function ($id) {
 });
 
 Route::get('farm/register', function () {
-    
+
     return view('farmaggie.register');
+});
+
+Route::get('farm/login', function () {
+
+    return view('farmaggie.login');
 });

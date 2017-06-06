@@ -5,10 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Custom Theme files -->
-<link href="css/style1.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="{{ URL::asset('css/style1.css') }}" rel="stylesheet" type="text/css" media="all"/>
+<link href="{{ URL::asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all"/>
+<link href="{{ URL::asset('css/bootstrap-social.css') }}" rel="stylesheet" type="text/css" media="all"/>
+
 <!-- //Custom Theme files -->
 <!-- web-font -->
  <link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
+ <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <!-- //web-font -->
 <!-- pop-up-box -->
 <script src="js/jquery-2.2.3.min.js"></script>
@@ -43,10 +47,10 @@
 					<input type="password" placeholder="รหัสผ่าน" name="password" required="">
 					<input type="submit" value="เข้าสู่ระบบ">
 				</form>
-				<div class="social-btns w3l">
-					<a class="fa" href="#">หรือเข้าสู่ระบบด้วย Facebook</a>
-				</div>
-				<h3>ยังไม่ได้สมัครสมาชิก <a href="register.html"> สมัครเลย !</a></h3>
+        <a class="btn btn-block btn-social btn-facebook" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-facebook']);">
+            <span class="fa fa-facebook"></span> เข้าสู่ระบบด้วย Facebook
+          </a>
+				<h3>ยังไม่ได้สมัครสมาชิก <a href="{{ URL::asset('farm/register') }}"> สมัครเลย !</a></h3>
 			</div>
 		</div>
 
