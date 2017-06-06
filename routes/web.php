@@ -30,10 +30,10 @@ Route::get('tasks/{task}', function ($id) {
 	//$task = DB::table('tasks')->find($id);
 	$task = Task::find($id);
 
-    return view('tasks/show', compact('task'));
+    return view('tasks.show', compact('task'));
 });
 
-Route::get('farmaggie/register', function () {
+Route::get('farm/register', function () {
     
     return view('farmaggie.register');
 });
