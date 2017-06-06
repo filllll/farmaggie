@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- font files -->
- <link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
+ <link href="{{ URL::asset('https://fonts.googleapis.com/css?family=Athiti') }}" rel="stylesheet">
  <!-- /font files -->
 <!-- css files -->
 <link href="{{ URL::asset('css/style.css') }}" rel='stylesheet' type='text/css' media="all" />
@@ -26,7 +26,7 @@
 						<div class="form-control">
 						<div class="main-row">
 								<label class="header">คำนำหน้าชื่อ <span>*</span></label>
-									<select name="คำนำหน้าชื่อ">
+									<select name="name_title">
 										<option value="none" selected disabled>เลือก</option>
 	                  					<option value="นาย">นาย</option>
 										<option value="นาง">นาง</option>
@@ -236,7 +236,7 @@
 						<div class="main-row">
 								<label class="header">สัญชาติ <span>*</span></label>
 									<select name="country">
-									<option value="none" selected="" disabled="">เลือก</option>
+									<option value="none" selected disabled>เลือก</option>
 									<option value="ไทย">ไทย</option>
 									<option value="afghan">Afghan</option>
 									<option value="albanian">Albanian</option>
@@ -436,7 +436,7 @@
 						<div class="form-control">
 							<div class="main-row">
 									<label class="header">วุฒิการศึกษาสูงสุด <span>*</span></label>
-										<select name="วุฒิการศึกษา">
+										<select name="education">
 											<option value="none" selected="" disabled="">เลือก</option>
 											<option value="ประถมศึกษาหรือต่ำกว่า">ประถมศึกษาหรือต่ำกว่า</option>
 										 	<option value="มัธยมศึกษาตอนต้น">มัธยมศึกษาตอนต้น</option>
@@ -487,20 +487,18 @@
 				<div class="w3ls-btn">
 					<div class="form-control">
 						<label class="header">ที่อยู่ที่สามารถติดต่อได้<span>*</span></label>
-						<input type="text" id="address" name="เลขที่" placeholder="เลขที่" title="โปรดกรอกเลขที่สำหรับที่อยู่" required="">
-						<input type="text" id="address" name="หมู่" placeholder="หมู่" title="โปรดกรอกหมู่" required="">
-						<input type="text" id="address" name="ซอย/ตรอก" placeholder="ซอย/ตรอก" title="โปรดกรอกซอย/ตรอก" required="">
-						<input type="text" id="address" name="ถนน" placeholder="ถนน" title="โปรดกรอกถนน" required="">
-						<input type="text" id="address" name="อำเภอ/เขต" placeholder="อำเภอ/เขต" title="โปรดกรอกอำเภอ/เขต" required="">
-						<input type="text" id="address" name="ตำบล/แขวง" placeholder="ตำบล/แขวง" title="โปรดกรอกตำบล/แขวง" required="">
-						<input type="text" id="address" name="จังหวัด" placeholder="จังหวัด" title="โปรดกรอกจังหวัด" required="">
-						<input type="text" id="address" name="รหัสไปรษณีย" placeholder="รหัสไปรษณีย์" title="โปรดกรอกรหัสไปรษณีย์" required="">
-						<input type="text" id="name" name="facebook" placeholder="ชื่อบัญชี Facebook">
-						<input type="text" id="name" name="line" placeholder="ชื่อไอดี Line">
+						<input type="text" id="add_no" name="add_no" placeholder="เลขที่" title="โปรดกรอกเลขที่สำหรับที่อยู่" required="">
+						<input type="text" id="add_moo" name="add_moo" placeholder="หมู่" title="โปรดกรอกหมู่" required="">
+						<input type="text" id="add_soi" name="add_soi" placeholder="ซอย/ตรอก" title="โปรดกรอกซอย/ตรอก" required="">
+						<input type="text" id="add_road" name="add_road" placeholder="ถนน" title="โปรดกรอกถนน" required="">
+						<input type="text" id="add_dist" name="add_dist" placeholder="อำเภอ/เขต" title="โปรดกรอกอำเภอ/เขต" required="">
+						<input type="text" id="add_subdist" name="add_subdist" placeholder="ตำบล/แขวง" title="โปรดกรอกตำบล/แขวง" required="">
+						<input type="text" id="add_province" name="add_province" placeholder="จังหวัด" title="โปรดกรอกจังหวัด" required="">
+						<input type="text" id="add_zip" name="add_zip" placeholder="รหัสไปรษณีย์" title="โปรดกรอกรหัสไปรษณีย์" required="">
+						<input type="text" id="add_face" name="add_face" placeholder="ชื่อบัญชี Facebook">
+						<input type="text" id="add_line" name="add_line" placeholder="ชื่อไอดี Line">
 					</div>
-					</div>
-
-
+				</div>
 
 					<div class="w3ls-btn">
 						<div class="contact-forms">
@@ -514,10 +512,10 @@
 					<div class="wthreesubmitaits">
 						<input type="submit" name="submit" value="สมัครสมาชิก">
 					</div>
-					</form>
-						</div>
-						</div>
+			</form>
 		</div>
+		</div>
+	</div>
 
 	</div>
 
