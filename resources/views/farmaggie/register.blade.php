@@ -202,14 +202,14 @@
 							</div>
 
 						<div class="form-control">
-							<label class="header">ชื่อ-ชื่อสกุล<span>*</span></label>
+							<label class="header">ชื่อ-สกุล<span>*</span></label>
 							<input type="text" id="surname" name="name" placeholder="ชื่อ" title="โปรดกรอกชื่อ" required>
-							<input type="text" id="surname" name="surname" placeholder="ชื่อสกุล" title="โปรดกรอกชื่อสกุล" required>
+							<input type="text" id="surname" name="surname" placeholder="สกุล" title="โปรดกรอกชื่อสกุล" required>
 						</div>
 
 						<div class="form-control">
-							<label class="header">วัน-เดือน-ปีเกิด<span>*</span></label>
-							<input type="text" id="name" name="birthdate" placeholder="01-01-2560" title="โปรดกรอก วัน-เดือน-ปีเกิด" required>
+							<label class="header">วัน-เดือน-ปีเกิด(ค.ศ.)<span>*</span></label>
+							<input type="date" id="name" name="birthdate" placeholder="01-01-2017" title="โปรดกรอก วัน-เดือน-ปีเกิด" required>
 						</div>
 
 						<div class="form-control">
@@ -228,7 +228,18 @@
 							<label class="header">เบอร์โทรศัพท์ <span>*</span></label>
 							<input type="text" id="name" name="mobile" placeholder="081-xxx-xxxx" title="โปรดกรอกเบอร์โทรศัพท์" required>
 						</div>
+						<script type="text/javascript">
+							$(document).ready(function(){
+							    $('#pass2').focusout(function(){
+							        var pass = $('#pass').val();
+							        var pass2 = $('#pass2').val();
+							        if(pass != pass2){
+							            alert('the passwords didn\'t match!');
+							        }
 
+							    });
+							});
+						</script>
 					</div>
 					</div>
 
