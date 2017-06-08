@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNationalityTable extends Migration
+class CreateTitlesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateNationalityTable extends Migration
      */
     public function up()
     {
-        Schema::create('nationality', function (Blueprint $table) {
-            $table->increments('nation_id');
-            $table->string('nation_name');
+        Schema::create('titles', function (Blueprint $table) {
+            $table->increments('title_id');
+            $table->string('title_name');
         });
     }
 
@@ -26,6 +26,6 @@ class CreateNationalityTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nationality');
+        Schema::dropIfExists('titles');
     }
 }
