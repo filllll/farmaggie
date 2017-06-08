@@ -29,3 +29,11 @@ Route::get('/farm/login', function () {
 
     return view('farmaggie.login');
 });
+Route::get('/farm/dashboard', function () {
+
+    return view('farmaggie.dashboard');
+});
+Route::get('/farm/addfarm', function () {
+
+    return view('farmaggie.addfarm');
+});
