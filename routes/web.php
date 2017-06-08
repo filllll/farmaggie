@@ -20,12 +20,6 @@ Route::get('/tasks', 'TasksController@index');
 
 Route::get('/tasks/{task}', 'TasksController@show');
 
-Route::get('/farm/register', function () {
+Route::get('/farm/register', 'FarmsController@register');
 
-    return view('farmaggie.register');
-});
-
-Route::get('/farm/login', function () {
-
-    return view('farmaggie.login');
-});
+Route::get('/farm/login', 'FarmsController@login');
