@@ -22,4 +22,6 @@ Route::get('/tasks/{task}', 'TasksController@show');
 
 Route::get('/farm/register', 'FarmsController@register');
 
-Route::get('/farm/login', 'FarmsController@login');
+Route::get('/farm/dashboard', 'FarmsController@dashboard');
+
+Route::get('/farm/addfarm', 'FarmsController@addfarm');

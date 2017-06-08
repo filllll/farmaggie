@@ -23,4 +23,18 @@ class FarmsController extends Controller
     	return view('farmaggie.login');
 
     }
+
+    public function dashboard()
+    {
+
+    	return view('farmaggie.dashboard');
+
+    }
+
+    public function addfarm()
+    {
+
+    	return view('farmaggie.addfarm');
+    	
+    }
 }
