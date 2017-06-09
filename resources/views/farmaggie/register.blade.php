@@ -209,6 +209,25 @@
 							<input type="text" id="surname" name="surname" placeholder="สกุล" title="โปรดกรอกชื่อสกุล" required>
 						</div>
 
+            <div class="content-wthree2">
+					<div class="grid-w3layouts1">
+						<div class="w3-agile1">
+							<label class="rating">เพศ<span>*</span></label>
+							<ul>
+								<li>
+									<input type="radio" id="a-option" name="status" value="ชาย">
+									<label for="a-option">ชาย </label>
+									<div class="check"></div>
+								</li>
+								<li>
+									<input type="radio" id="b-option" name="status" value="หญิง">
+									<label for="b-option">หญิง</label>
+									<div class="check"><div class="inside"></div></div>
+								</li>
+				  	<div class="clear"></div>
+							</ul>
+						</div>
+
 						<div class="form-control">
 							<label class="header">วัน-เดือน-ปีเกิด(ค.ศ.)<span>*</span></label>
 							<input type="date" id="name" name="birthdate" placeholder="01-01-2017" title="โปรดกรอก วัน-เดือน-ปีเกิด" required>
