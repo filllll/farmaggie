@@ -20,8 +20,10 @@ Route::get('/tasks', 'TasksController@index');
 
 Route::get('/tasks/{task}', 'TasksController@show');
 
-Route::get('/farm/register', 'FarmsController@register');
-
 Route::get('/farm/dashboard', 'FarmsController@dashboard');
 
 Route::get('/farm/addfarm', 'FarmsController@addfarm');
+
+Route::get('/farm/register', 'AccountsController@create');
+
+Route::post('/farm', 'AccountsController@store')->name('farm');

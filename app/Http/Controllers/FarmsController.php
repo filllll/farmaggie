@@ -11,9 +11,7 @@ class FarmsController extends Controller
     public function register()
     {
 
-    	$nations = DB::table('nation')->get();
     	
-    	return view('farmaggie.register', compact('nations'));
 
     }
 
@@ -35,6 +33,6 @@ class FarmsController extends Controller
     {
 
     	return view('farmaggie.addfarm');
-    	
+
     }
 }

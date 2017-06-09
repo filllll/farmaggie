@@ -20,7 +20,9 @@
 	<h1 class="header-w3ls">มาร่วมเป็นครอบครัว Farmaggie</h1>
 	<div class="content-w3ls">
 		<div class="form-w3ls">
-			<form action="#" method="post">
+			<form method="post" action="{{ route('farm') }}" >
+
+				{{ csrf_field() }}
 				<div class="content-wthree1">
 					<div class="grid-agileits1">
 						<div class="form-control">
@@ -218,7 +220,7 @@
 						</div>
 	          			<div class="form-control">
 							<label class="header">สร้างรหัสผ่าน <span>*</span></label>
-							<input type="password" id="name" name="pass" placeholder="รหัสผ่าน" title="โปรดกรอกรหัสผ่าน" required>
+							<input type="password" id="name" name="pass1" placeholder="รหัสผ่าน" title="โปรดกรอกรหัสผ่าน" required>
 						</div>
 	           			<div class="form-control">
 							<label class="header">ยืนยันรหัสผ่าน <span>*</span></label>
@@ -230,9 +232,9 @@
 						</div>
 						<script type="text/javascript">
 							$(document).ready(function(){
-							    $('#pass2').focusout(function(){
-							        var pass = $('#pass').val();
-							        var pass2 = $('#pass2').val();
+							    $('pass1').focusout(function(){
+							        var pass = $('pass1').val();
+							        var pass2 = $('pass2').val();
 							        if(pass != pass2){
 							            alert('the passwords didn\'t match!');
 							        }
@@ -247,12 +249,12 @@
 						<div class="main-row">
 								<label class="header">สัญชาติ <span>*</span></label>
 									<select name="country">
-									<option value="none" selected disabled>เลือก</option>
-									@foreach ($nations as $nation)
-										<option value="{{ $nation->nation_name }}">
-											{{ $nation->nation_name }}
-										</option>
-									@endforeach
+										<option value="none" selected disabled>เลือก</option>
+										@foreach ($nations as $nation)
+											<option value="{{ $nation->nation_name }}">
+												{{ $nation->nation_name }}
+											</option>
+										@endforeach
 									</select>
 							</div>
 						</div>
@@ -280,22 +282,22 @@
 							<label class="rating">สถานภาพ<span>*</span></label>
 							<ul>
 								<li>
-									<input type="radio" id="a-option" name="option" value="โสด">
+									<input type="radio" id="a-option" name="status" value="โสด">
 									<label for="a-option">โสด </label>
 									<div class="check"></div>
 								</li>
 								<li>
-									<input type="radio" id="b-option" name="option" value="สมรส">
+									<input type="radio" id="b-option" name="status" value="สมรส">
 									<label for="b-option">สมรส</label>
 									<div class="check"><div class="inside"></div></div>
 								</li>
 								<li>
-									<input type="radio" id="c-option" name="option" value="หย่าร้าง">
+									<input type="radio" id="c-option" name="status" value="หย่าร้าง">
 									<label for="c-option">หย่าร้าง</label>
 									<div class="check"><div class="inside"></div></div>
 								</li>
 								<li>
-									<input type="radio" id="d-option" name="option" value="ม่าย">
+									<input type="radio" id="d-option" name="status" value="ม่าย">
 									<label for="d-option">ม่าย</label>
 									<div class="check"></div>
 								</li>
@@ -315,8 +317,8 @@
 						<input type="text" id="address" name="add_moo" placeholder="หมู่" title="โปรดกรอกหมู่" required="">
 						<input type="text" id="address" name="add_soi" placeholder="ซอย/ตรอก" title="โปรดกรอกซอย/ตรอก" required="">
 						<input type="text" id="address" name="add_road" placeholder="ถนน" title="โปรดกรอกถนน" required="">
-						<input type="text" id="address" name="add_dist" placeholder="อำเภอ/เขต" title="โปรดกรอกอำเภอ/เขต" required="">
-						<input type="text" id="address" name="add_subdist" placeholder="ตำบล/แขวง" title="โปรดกรอกตำบล/แขวง" required="">
+						<input type="text" id="address" name="add_dis" placeholder="อำเภอ/เขต" title="โปรดกรอกอำเภอ/เขต" required="">
+						<input type="text" id="address" name="add_subdis" placeholder="ตำบล/แขวง" title="โปรดกรอกตำบล/แขวง" required="">
 						<input type="text" id="address" name="add_province" placeholder="จังหวัด" title="โปรดกรอกจังหวัด" required="">
 						<input type="text" id="address" name="add_zip" placeholder="รหัสไปรษณีย์" title="โปรดกรอกรหัสไปรษณีย์" required="">
 						<input type="text" id="address" name="add_face" placeholder="ชื่อบัญชี Facebook">
