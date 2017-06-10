@@ -21,8 +21,16 @@
 	<div class="content-w3ls">
 		<div class="form-w3ls">
 			<form method="post" action="{{ route('farm') }}" >
-
 				{{ csrf_field() }}
+				@if (count($errors) > 0)
+			    <div class="alert alert-danger">
+			        <ul>
+			            @foreach ($errors->all() as $error)
+			                <li>{{ $error }}</li>
+			            @endforeach
+			        </ul>
+			    </div>
+				@endif
 				<div class="content-wthree1">
 					<div class="grid-agileits1">
 						<div class="form-control">
