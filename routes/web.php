@@ -20,6 +20,8 @@ Route::get('/tasks', 'TasksController@index');
 
 Route::get('/tasks/{task}', 'TasksController@show');
 
+Route::get('/farm/login', 'FarmsController@login');
+
 Route::get('/farm/dashboard', 'FarmsController@dashboard');
 
 Route::get('/farm/addfarm', 'FarmsController@addfarm');
