@@ -209,24 +209,32 @@
 							<input type="text" id="surname" name="surname" placeholder="สกุล" title="โปรดกรอกชื่อสกุล" required>
 						</div>
 
-            <div class="content-wthree2">
-					<div class="grid-w3layouts1">
-						<div class="w3-agile1">
-							<label class="rating">เพศ<span>*</span></label>
-							<ul>
-								<li>
-									<input type="radio" id="a-option" name="sex" value="ชาย">
-									<label for="a-option">ชาย </label>
-									<div class="check"></div>
-								</li>
-								<li>
-									<input type="radio" id="b-option" name="sex" value="หญิง">
-									<label for="b-option">หญิง</label>
-									<div class="check"><div class="inside"></div></div>
-								</li>
-				  	<div class="clear"></div>
-							</ul>
+
+							<div class="form-control">
+						<div class="grid-w3layouts1">
+							<div class="w3-agile1">
+								<label class="rating">เพศ<span>*</span></label>
+								<ul>
+									<li>
+										<input type="radio" id="a-option" name="sex" value="male">
+										<label for="a-option">ชาย </label>
+										<div class="check"></div>
+									</li>
+									<li>
+										<input type="radio" id="b-option" name="sex" value="female">
+										<label for="b-option">หญิง</label>
+										<div class="check"><div class="inside"></div></div>
+									</li>
+									<div class="clear"></div>
+								</ul>
+							</div>
+
 						</div>
+					</div>
+
+						<div class="clear"></div>
+					</div>
+
 
 						<div class="form-control">
 							<label class="header">วัน-เดือน-ปีเกิด(ค.ศ.)<span>*</span></label>
@@ -301,26 +309,25 @@
 							<label class="rating">สถานภาพ<span>*</span></label>
 							<ul>
 								<li>
-									<input type="radio" id="a-option" name="status" value="โสด">
-									<label for="a-option">โสด </label>
-									<div class="check"></div>
-								</li>
-								<li>
-									<input type="radio" id="b-option" name="status" value="สมรส">
-									<label for="b-option">สมรส</label>
+									<input type="radio" id="c-option" name="status" value="single">
+									<label for="c-option">โสด</label>
 									<div class="check"><div class="inside"></div></div>
 								</li>
 								<li>
-									<input type="radio" id="c-option" name="status" value="หย่าร้าง">
-									<label for="c-option">หย่าร้าง</label>
+									<input type="radio" id="d-option" name="status" value="married">
+									<label for="d-option">สมรส</label>
 									<div class="check"><div class="inside"></div></div>
 								</li>
 								<li>
-									<input type="radio" id="d-option" name="status" value="ม่าย">
-									<label for="d-option">ม่าย</label>
-									<div class="check"></div>
+									<input type="radio" id="f-option" name="status" value="divorced">
+									<label for="f-option">หย่าร้าง</label>
+									<div class="check"><div class="inside"></div></div>
 								</li>
-								<div class="clear"></div>
+								<li>
+									<input type="radio" id="g-option" name="status" value="widowed">
+									<label for="g-option">ม่าย</label>
+									<div class="check"><div class="inside"></div></div>
+								</li>
 							</ul>
 						</div>
 
