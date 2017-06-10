@@ -39,32 +39,54 @@ class AccountsController extends Controller
      */
     public function store(Request $request)
     {
-        $account = new Account;
-        $account->account_title = request('name_title');
-        $account->account_name = request('name');
-        $account->account_surname = request('surname');
-        $account->account_name = request('name');
-        $account->account_email = request('email');
-        $account->account_pass = request('pass1');
-        //$account->account_sex = request('sex');
-        $account->account_DOB = request('birthdate');
-        $account->account_mobile = request('mobile');
-        $account->account_nation = request('country');
-        $account->account_name = request('name');
-        $account->account_edu = request('education');
-        $account->account_status = request('status');
-        $account->account_hno = request('add_no');
-        $account->account_moo = request('add_moo');
-        $account->account_soi = request('add_soi');
-        $account->account_road = request('add_road');
-        $account->account_dis = request('add_dis');
-        $account->account_subdis = request('add_subdis');
-        $account->account_province = request('add_province');
-        $account->account_postID = request('add_zip');
-        $account->account_facebook = request('add_face');
-        $account->account_line = request('add_line');
-        
-        $account->save();
+        $this->validate(request(), [
+            'name_title' => 'required',
+            'name' => 'required',
+            'surname' => 'required',
+            'email' => 'required',
+            'pass1' => 'required',
+            'pass2' => 'required',
+            'sex' => 'required',
+            'birthdate' => 'required',
+            'mobile' => 'required',
+            'country' => 'required',
+            'education' => 'required',
+            'status' => 'required',
+            'add_no' => 'required',
+            'add_moo' => 'required',
+            'add_soi' => 'required',
+            'add_road' => 'required',
+            'add_dis' => 'required',
+            'add_subdis' => 'required',
+            'add_province' => 'required',
+            'add_zip' => 'required',
+            'add_face' => 'required',
+            'add_line' => 'required',
+        ]);
+
+        Account::create([
+            'account_title' => request('name_title'),
+            'account_name' => request('name'),
+            'account_surname' => request('surname'),
+            'account_email' => request('email'),
+            'account_pass' => request('pass1'),
+            'account_sex' => request('sex'),
+            'account_DOB' => request('birthdate'),
+            'account_mobile' => request('mobile'),
+            'account_nation' => request('country'),
+            'account_edu' => request('education'),
+            'account_status' => request('status'),
+            'account_hno' => request('add_no'),
+            'account_moo' => request('add_moo'),
+            'account_soi' => request('add_soi'),
+            'account_road' => request('add_road'),
+            'account_dis' => request('add_dis'),
+            'account_subdis' => request('add_subdis'),
+            'account_province' => request('add_province'),
+            'account_postID' => request('add_zip'),
+            'account_facebook' => request('add_face'),
+            'account_line' => request('add_line'),
+        ]);
         
         return redirect('farm/dashboard');
     }

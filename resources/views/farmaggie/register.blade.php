@@ -28,7 +28,7 @@
 						<div class="form-control">
 						<div class="main-row">
 								<label class="header">คำนำหน้าชื่อ <span>*</span></label>
-									<select name="name_title">
+									<select name="name_title" required>
 										<option value="none" selected disabled>เลือก</option>
 	                  					<option value="นาย">นาย</option>
 										<option value="นาง">นาง</option>
@@ -215,12 +215,12 @@
 							<label class="rating">เพศ<span>*</span></label>
 							<ul>
 								<li>
-									<input type="radio" id="a-option" name="status" value="ชาย">
+									<input type="radio" id="a-option" name="sex" value="ชาย">
 									<label for="a-option">ชาย </label>
 									<div class="check"></div>
 								</li>
 								<li>
-									<input type="radio" id="b-option" name="status" value="หญิง">
+									<input type="radio" id="b-option" name="sex" value="หญิง">
 									<label for="b-option">หญิง</label>
 									<div class="check"><div class="inside"></div></div>
 								</li>
