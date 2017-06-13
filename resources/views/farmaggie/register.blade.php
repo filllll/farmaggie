@@ -7,7 +7,7 @@
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!-- font files -->
   <link rel="icon" href="{{ URL::asset('icon.png')}}">
-	<link href="{{ URL::asset('https://fonts.googleapis.com/css?family=Athiti') }}" rel="stylesheet">
+	<link href="{{ URL::asset('https://fonts.googleapis.com/css?family=Roboto|Athiti') }}" rel="stylesheet">
 	<!-- /font files -->
 	<!-- css files -->
 	<link href="{{ URL::asset('css/style.css') }}" rel='stylesheet' type='text/css' media="all" />

@@ -74,7 +74,7 @@ img {
 
 /*--- end reset code ---*/
 body {
-	background: url(../images/1.jpeg);
+	background: url(../images/2.jpeg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -83,7 +83,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
-	  font-family: 'Athiti', sans-serif;
+	  font-family: 'Roboto', 'Athiti', sans-serif;
 }
 h1.header-w3ls {
     text-align: center;
