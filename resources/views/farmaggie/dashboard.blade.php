@@ -51,10 +51,11 @@
 		});
 		if (theme !== 'default') $('body').addClass(theme);
 	</script>
+
 	@include ('layouts.sidebar')
 	@include ('layouts.header')
-			<div class="main-grid">
 
+			<div class="main-grid">
 				<div class="social grid">
 					<div class="grid-info">
 						<div class="col-md-3 top-comment-grid">
@@ -76,7 +77,7 @@
 								</div>
 								<div class="comments-info">
 									<h3>696</h3>
-									<a href="#">จำนวนสุกรในฟาร์ม</a>
+									<a href="#">จำนวนสุกร</a>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -88,7 +89,7 @@
 								</div>
 								<div class="comments-info tweets-info">
 									<h3>1,960 </h3>
-									<a href="#">ราคาสุกรวันนี้ (ต่อตัว)</a>
+									<a href="#">ราคาสุกรวันนี้</a>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -100,7 +101,7 @@
 								</div>
 								<div class="comments-info views-info">
 									<h3>ดี</h3>
-									<a href="#">คุณภาพฟาร์มโดยรวม</a>
+									<a href="#">คุณภาพฟาร์ม</a>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -108,6 +109,7 @@
 						<div class="clearfix"> </div>
 					</div>
 				</div>
+
 
 				<div class="agile-grids">
 					<div class="col-md-4 charts-right">
