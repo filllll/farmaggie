@@ -421,7 +421,7 @@ body a:hover{
 }
 .logo {
     float: left;
-    width: 15%;
+    display:flex
 }
 .logo h1 a img {
     margin-right: .5em;
@@ -935,6 +935,7 @@ ul.dropdown-menu.drp-mnu li {
     background: #FFFFFF;
 }
 .grid-info {
+    display:flex;
     background: #fff;
     padding: 1em;
 }
@@ -3854,7 +3855,7 @@ div#vmap {
 /*-- responsive --*/
 @media(max-width:1440px){
 	.logo {
-		width: 16%;
+		
 	}
 	.top-comment-grid {
 		width: 24%;
