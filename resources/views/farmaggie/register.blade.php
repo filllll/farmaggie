@@ -264,8 +264,21 @@
 						</div>
 						<div class="form-control">
 							<label class="header">เบอร์โทรศัพท์ <span>*</span></label>
-							<input type="text" id="name" name="mobile" placeholder="081-xxx-xxxx" title="โปรดกรอกเบอร์โทรศัพท์" required>
+							<input type="text" id="name" maxlength="15" size="25" onKeyup='addDashes(this)' name="mobile" placeholder="081-xxx-xxxx" title="โปรดกรอกเบอร์โทรศัพท์" required>
 						</div>
+            <script>
+            window.addDashes = function addDashes(f) {
+              var r = /(\D+)/g,
+                  npa = '',
+                  nxx = '',
+                  last4 = '';
+              f.value = f.value.replace(r, '');
+              npa = f.value.substr(0, 3);
+              nxx = f.value.substr(3, 3);
+              last4 = f.value.substr(6, 4);
+              f.value = npa + '-' + nxx + '-' + last4;
+          }
+          </script>
 					</div>
 				</div>
 
