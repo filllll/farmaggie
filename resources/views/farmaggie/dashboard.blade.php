@@ -1,19 +1,9 @@
 <!DOCTYPE html>
-<head>
 	@include ('layouts.head')
-</head>
-<body class="dashboard-page">
-	<script>
-		var theme = $.cookie('protonTheme') || 'default';
-		$('body').removeClass (function (index, css) {
-			return (css.match (/\btheme-\S+/g) || []).join(' ');
-		});
-		if (theme !== 'default') $('body').addClass(theme);
-	</script>
-
 	@include ('layouts.sidebar')
 	@include ('layouts.header')
 
+<body class="dashboard-page">
 			<div class="main-grid">
 				<div class="social grid">
 					<div class="grid-info">
@@ -147,15 +137,8 @@
 				</div>
 				<div class="clearfix"> </div>
 			</div>
-
 		</div>
-		<!-- footer -->
-		<div class="footer">
-			<p>© 2017 Farmaggie . All Rights Reserved</a></p>
-		</div>
-		<!-- //footer -->
+	   @include ('layouts.footer')
 	</section>
-	<script src="{{ URL::asset('js/bootstrap.js')}}"></script>
-
 </body>
 </html>

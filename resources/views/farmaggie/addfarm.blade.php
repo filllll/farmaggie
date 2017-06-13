@@ -1,24 +1,12 @@
 <!DOCTYPE html>
-<head>
 @include ('layouts.head')
-</head>
+@include ('layouts.sidebar')
+@include ('layouts.header')
 <body class="dashboard-page">
-	<script>
-		var theme = $.cookie('protonTheme') || 'default';
-		$('body').removeClass (function (index, css) {
-			return (css.match (/\btheme-\S+/g) || []).join(' ');
-		});
-		if (theme !== 'default') $('body').addClass(theme);
-	</script>
-
-	@include ('layouts.sidebar')
-	@include ('layouts.header')
-
 			<div class="main-grid">
 				<div class="agile-grids">
 					<!-- input-forms -->
 					<div class="grids">
-
 						<div class="panel panel-widget forms-panel">
 							<div class="progressbar-heading general-heading">
 								<h4>เพิ่มฟาร์ม</h4>
@@ -168,13 +156,10 @@
 			<!-- //input-forms -->
 		</div>
 	</div>
-	<!-- footer -->
-	<div class="footer">
-		<p>© 2017 Farmaggie . All Rights Reserved</p>
-	</div>
-	<!-- //footer -->
+
+	@include ('layouts.footer')
+
 </section>
-<script src="{{ URL::asset('js/bootstrap.js')}}"></script>
 
 </body>
 </html>
