@@ -16,10 +16,10 @@ class CreateAccountsTable extends Migration
         Schema::create('accounts', function (Blueprint $table) {
             $table->increments('account_id');
             $table->string('account_title');
-            $table->string('account_name', 20);
-            $table->string('account_surname', 20);
-            $table->string('account_email', 30);
-            $table->string('account_pass', 30);
+            $table->string('account_name');
+            $table->string('account_surname');
+            $table->string('account_email');
+            $table->string('account_pass');
             $table->string('account_sex', 10);
             $table->date('account_DOB');
             $table->string('account_mobile', 10);
