@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Custom Theme files -->
+<link rel="icon" href="{{ URL::asset('icon.png')}}">
 <link href="{{ URL::asset('css/style1.css') }}" rel="stylesheet" type="text/css" media="all"/>
 <link href="{{ URL::asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all"/>
 <link href="{{ URL::asset('css/bootstrap-social.css') }}" rel="stylesheet" type="text/css" media="all"/>
