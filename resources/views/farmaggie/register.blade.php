@@ -12,9 +12,12 @@
 	<!-- css files -->
 	<link href="{{ URL::asset('css/style.css') }}" rel='stylesheet' type='text/css' media="all" />
 	<link rel="stylesheet" href="{{ URL::asset('css/j-forms.css') }}">
-
+ 
 	<!-- /css files -->
 	<script type="text/javascript" src="{{ URL::asset('js/jquery-2.1.4.min.js') }}"></script>
+	<script src="{{ URL::asset('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js') }}"></script>
+	<script src="{{ URL::asset('https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js') }}"></script>
+
 
 </head>
 <body>
@@ -23,15 +26,6 @@
 		<div class="form-w3ls">
 			<form method="post" action="{{ route('farm') }}" >
 				{{ csrf_field() }}
-				@if (count($errors) > 0)
-				<div class="alert alert-danger">
-					<ul>
-						@foreach ($errors->all() as $error)
-						<li>{{ $error }}</li>
-						@endforeach
-					</ul>
-				</div>
-				@endif
 				<div class="content-wthree1">
 					<div class="grid-agileits1">
 						<div class="form-control">
@@ -214,8 +208,8 @@
 
 							<div class="form-control">
 								<label class="header">ชื่อ-สกุล<span>*</span></label>
-								<input type="text" id="surname" name="name" placeholder="ชื่อ" title="โปรดกรอกชื่อ" required>
-								<input type="text" id="surname" name="surname" placeholder="สกุล" title="โปรดกรอกชื่อสกุล" required>
+								<input type="text" id="surname" name="name" placeholder="ชื่อ" required autofocus oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอกชื่อ')">
+								<input type="text" id="surname" name="surname" placeholder="นามสกุล" required autofocus oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอกนามสกุล')">
 							</div>
 
 
@@ -225,12 +219,12 @@
 										<label class="rating">เพศ<span>*</span></label>
 										<ul>
 											<li>
-												<input type="radio" id="a-option" name="sex" value="male">
+												<input type="radio" id="a-option" name="sex" value="male" required/>
 												<label for="a-option">ชาย </label>
 												<div class="check"></div>
 											</li>
 											<li>
-												<input type="radio" id="b-option" name="sex" value="female">
+												<input type="radio" id="b-option" name="sex" value="female"/>
 												<label for="b-option">หญิง</label>
 												<div class="check"><div class="inside"></div></div>
 											</li>
@@ -247,38 +241,52 @@
 
 						<div class="form-control">
 							<label class="header">วัน-เดือน-ปีเกิด(ค.ศ.)<span>*</span></label>
-							<input type="date" id="name" name="birthdate" placeholder="01-01-2017" title="โปรดกรอก วัน-เดือน-ปีเกิด" required>
+							<input type="date" id="name" name="birthdate" placeholder="01-01-2017" required oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอก วัน-เดือน-ปีเกิด')">
 						</div>
 
 						<div class="form-control">
 							<label class="header">อีเมล <span>*</span></label>
-							<input type="email" id="email" name="email" placeholder="mail@example.com" title="โปรดกรอกอีเมลล์" required>
+							<input type="email" id="email" name="email" placeholder="mail@example.com" required oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอกอีเมล')">
 						</div>
 						<div class="form-control">
 							<label class="header">สร้างรหัสผ่าน <span>*</span></label>
-							<input type="password" id="name" name="pass1" placeholder="รหัสผ่าน" title="โปรดกรอกรหัสผ่าน" required>
+							<input type="password" id="password" placeholder="รหัสผ่าน" required oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอกรหัสผ่าน')">
 						</div>
 						<div class="form-control">
 							<label class="header">ยืนยันรหัสผ่าน <span>*</span></label>
-							<input type="password" id="name" name="pass2" placeholder="ยืนยันรหัสผ่าน" title="โปรดกรอกรหัสผ่าน" required>
+							<input type="password" id="confirm_password" placeholder="ยืนยันรหัสผ่าน" required>
 						</div>
+						<script>
+						var password = document.getElementById("password")
+ 						 , confirm_password = document.getElementById("confirm_password");
+						function CheckPass() {				
+							if(password.value != confirm_password.value){
+						        confirm_password.setCustomValidity('โปรดกรอกรหัสผ่านให้ตรงกัน');
+							}    
+						 else{
+							    confirm_password.setCustomValidity('');
+						     }
+					    }
+						password.onchange = CheckPass;
+						confirm_password.onkeyup = CheckPass;
+						</script>
 						<div class="form-control">
 							<label class="header">เบอร์โทรศัพท์ <span>*</span></label>
-							<input type="text" id="name" maxlength="15" size="25" onKeyup='addDashes(this)' name="mobile" placeholder="081-xxx-xxxx" title="โปรดกรอกเบอร์โทรศัพท์" required>
+							<input type="text" id="name" maxlength="15" size="25" onKeyup='addDashes(this)' name="mobile" placeholder="081-xxx-xxxx" required oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอกเบอร์โทรศัพท์')">
 						</div>
-            <script>
-            window.addDashes = function addDashes(f) {
-              var r = /(\D+)/g,
-                  npa = '',
-                  nxx = '',
-                  last4 = '';
-              f.value = f.value.replace(r, '');
-              npa = f.value.substr(0, 3);
-              nxx = f.value.substr(3, 3);
-              last4 = f.value.substr(6, 4);
-              f.value = npa + '-' + nxx + '-' + last4;
-          }
-          </script>
+						<script>
+						window.addDashes = function addDashes(f) {
+						var r = /(\D+)/g,
+							npa = '',
+							nxx = '',
+							last4 = '';
+						f.value = f.value.replace(r, '');
+						npa = f.value.substr(0, 3);
+						nxx = f.value.substr(3, 3);
+						last4 = f.value.substr(6, 4);
+						f.value = npa + '-' + nxx + '-' + last4;
+					}
+					</script>
 					</div>
 				</div>
 
@@ -299,7 +307,7 @@
 				<div class="form-control">
 					<div class="main-row">
 						<label class="header">วุฒิการศึกษาสูงสุด <span>*</span></label>
-						<select name="education">
+						<select name="education" required oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดเลือกวุฒิการศึกษา')">
 							<option value="none" selected="" disabled="">เลือก</option>
 							<option value="ประถมศึกษาหรือต่ำกว่า">ประถมศึกษาหรือต่ำกว่า</option>
 							<option value="มัธยมศึกษาตอนต้น">มัธยมศึกษาตอนต้น</option>
@@ -349,14 +357,14 @@
 				<div class="w3ls-btn">
 					<div class="form-control">
 						<label class="header">ที่อยู่ที่สามารถติดต่อได้<span>*</span></label>
-						<input type="text" id="address" name="add_no" placeholder="เลขที่" title="โปรดกรอกเลขที่สำหรับที่อยู่" required="">
-						<input type="text" id="address" name="add_moo" placeholder="หมู่" title="โปรดกรอกหมู่" required="">
-						<input type="text" id="address" name="add_soi" placeholder="ซอย/ตรอก" title="โปรดกรอกซอย/ตรอก" required="">
-						<input type="text" id="address" name="add_road" placeholder="ถนน" title="โปรดกรอกถนน" required="">
-						<input type="text" id="address" name="add_dis" placeholder="อำเภอ/เขต" title="โปรดกรอกอำเภอ/เขต" required="">
-						<input type="text" id="address" name="add_subdis" placeholder="ตำบล/แขวง" title="โปรดกรอกตำบล/แขวง" required="">
-						<input type="text" id="address" name="add_province" placeholder="จังหวัด" title="โปรดกรอกจังหวัด" required="">
-						<input type="text" id="address" name="add_zip" placeholder="รหัสไปรษณีย์" title="โปรดกรอกรหัสไปรษณีย์" required="">
+						<input type="text" id="address" name="add_no" placeholder="เลขที่" title="โปรดกรอกเลขที่สำหรับที่อยู่" required="" oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอกชื่อ')">
+						<input type="text" id="address" name="add_moo" placeholder="หมู่">
+						<input type="text" id="address" name="add_soi" placeholder="ซอย/ตรอก" title="โปรดกรอกซอย/ตรอก" required="" oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอกซอย/ตรอก')">
+						<input type="text" id="address" name="add_road" placeholder="ถนน" title="โปรดกรอกถนน" required="" oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอกถนน')">
+						<input type="text" id="address" name="add_dis" placeholder="อำเภอ/เขต" title="โปรดกรอกอำเภอ/เขต" required="" oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอกอำเภอ/เขต')">
+						<input type="text" id="address" name="add_subdis" placeholder="ตำบล/แขวง" title="โปรดกรอกตำบล/แขวง" required="" oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอกตำบล/แขวง')">
+						<input type="text" id="address" name="add_province" placeholder="จังหวัด" title="โปรดกรอกจังหวัด" required="" oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอกจังหวัด')">
+						<input type="text" id="address" name="add_zip" placeholder="รหัสไปรษณีย์" title="โปรดกรอกรหัสไปรษณีย์" required="" oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอกรหัสไปรษณีย์')"> 
 						<input type="text" id="address" name="add_face" placeholder="ชื่อบัญชี Facebook">
 						<input type="text" id="address" name="add_line" placeholder="ชื่อไอดี Line">
 					</div>

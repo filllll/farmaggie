@@ -168,7 +168,7 @@ ul.w3-size li.white{
 	background:#fff;
 	height:50px;
 }
-input#name, input#email, input#orgn, textarea#message {
+input#name, input#password, input#confirm_password,  input#email, input#orgn, textarea#message {
     border: none;
     color: #fff;
     text-align: justify;
@@ -180,7 +180,7 @@ input#name, input#email, input#orgn, textarea#message {
 	    margin-bottom: 16px;
 
 }
-input#name,input#email,input#orgn {
+input#name, input#password, input#confirm_password, input#email, input#orgn {
 	height:40px;
 	padding:0 15px;
 	width:92.2%;
