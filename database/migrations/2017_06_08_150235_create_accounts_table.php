@@ -23,19 +23,20 @@ class CreateAccountsTable extends Migration
             $table->string('account_sex', 10);
             $table->date('account_DOB');
             $table->string('account_mobile', 10);
-            $table->string('account_nation', 30);
+            $table->string('account_nation');
             $table->string('account_edu');
-            $table->string('account_status', 15);
+            $table->string('account_status');
             $table->string('account_hno', 15);
             $table->string('account_moo', 10);
-            $table->string('account_soi', 30);
-            $table->string('account_road', 30);
-            $table->string('account_dis', 30);
-            $table->string('account_subdis', 30);
-            $table->string('account_province', 30);
+            $table->string('account_soi');
+            $table->string('account_road');
+            $table->string('account_dis');
+            $table->string('account_subdis');
+            $table->string('account_province');
             $table->string('account_postID', 5);
-            $table->string('account_facebook', 30);
-            $table->string('account_line', 30);
+            $table->string('account_facebook');
+            $table->string('account_line');
+            $table->timestamps();
         });
     }
 

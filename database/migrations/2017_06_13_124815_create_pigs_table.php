@@ -19,8 +19,11 @@ class CreatePigsTable extends Migration
             $table->foreign('farm_id')->references('farm_id')->on('farms');
             $table->integer('type_id')->unsigned();
             $table->foreign('type_id')->references('type_id')->on('pigTypes');
+            $table->integer('pig_age')->unsigned();
             $table->boolean('isSick');
-            
+            $table->integer('pig_buyPrice')->unsigned();
+            $table->integer('pig_sellPrice')->unsigned();
+            $table->boolean('isSold');
             $table->timestamps();
         });
     }

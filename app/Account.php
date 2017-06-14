@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Account extends Model
 {
     protected $table = 'accounts';
-    public $timestamps = false;
     // protected $fillable = [
     // 'account_title', 'account_name', 'account_surname', 'account_email', 'account_pass',
     // 'account_sex', 'account_DOB', 'account_mobile', 'account_nation', 'account_edu',
@@ -15,6 +14,10 @@ class Account extends Model
     // 'account_dis', 'account_subdis', 'account_province', 'account_postID', 'account_facebook',
     // 'account_line'
     // ];
-    
-    protected $guarded = ['account_id'];
+    protected $guarded = ['account_id', 'created_at', 'updated_at'];
+
+    public function farms()
+    {
+        return $this->hasMany('App\Farm', 'account_id', 'account_id');
+    }
 }
