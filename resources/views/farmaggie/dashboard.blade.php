@@ -59,6 +59,56 @@
 					</div>
 				</div>
 
+				<div class="agile-last-grids">
+					<div class="col-md-8 agile-last-left">
+						<div class="agile-last-grid">
+							<div class="area-grids-heading">
+								<h3>รายรับรายจ่าย</h3>
+							</div>
+							<canvas id="mixed-chart" width="800" height="450"></canvas>
+						<script>
+						new Chart(document.getElementById("mixed-chart"), {
+							type: 'bar',
+							data: {
+							labels: ["มกรา", "กุมภา", "มีนา", "เมษา", "พฤษภา", "มิถุนา"],
+							datasets: [{
+								label: "รายรับ",
+								type: "line",
+								borderColor: "#8e5ea2",
+								data: [12000,5000,6750,7340,15000,11100],
+								fill: false
+								}, {
+								label: "รายจ่าย",
+								type: "line",
+								borderColor: "#3e95cd",
+								data: [20000,15000,7830,2470,1110,9870],
+								fill: false
+								}, {
+								label: "รายรับ",
+								type: "bar",
+								backgroundColor: "rgba(0,0,0,0.2)",
+								data: [12000,5000,6750,7340,15000,11100],
+								}, {
+								label: "รายจ่าย",
+								type: "bar",
+								backgroundColor: "rgba(0,0,0,0.2)",
+								backgroundColorHover: "#3e95cd",
+								data: [20000,15000,7830,2470,1110,9870]
+								}
+							]
+							},
+							options: {
+							title: {
+								display: true,
+								text: 'ย้อนหลังหกเดือน'
+							},
+							legend: { display: false }
+							}
+						});
+						</script>
+
+					</div>
+				</div>
 
 				<div class="agile-grids">
 					<div class="col-md-4 charts-right">
@@ -84,33 +134,8 @@
 						<!-- //area-chart -->
 					</div>
 				</div>
-				<div class="agile-last-grids">
-					<div class="col-md-4 agile-last-left">
-						<div class="agile-last-grid">
-							<div class="area-grids-heading">
-								<h3>ราคาสุกรย้อนหลัง 4 วัน</h3>
-							</div>
-							<div id="graph7"></div>
-							<script>
-							// This crosses a DST boundary in the UK.
-							Morris.Area({
-								element: 'graph7',
-								data: [
-								{x: '07-06-2560 10:00:00', y: 1120, z: 1950},
-								{x: '08-06-2560 10:00:00', y: 1150, z: 1900},
-								{x: '09-06-2560 10:00:00', y: 1270, z: 1870},
-								{x: '10-06-2560 10:00:00', y: 1100, z: 1920}
-								],
-								xkey: 'x',
-								ykeys: ['y', 'z'],
-								labels: ['ลูกสุกร', 'สุกรเต็มวัย']
-							});
-						</script>
 
-					</div>
-				</div>
-
-				<div class="col-md-4 agile-last-left agile-last-right">
+				<div class="col-md-4 agile-last-right">
 					<div class="agile-last-grid">
 						<div class="area-grids-heading">
 							<h3>ยอดการขายสุกรย้อนหลัง 4 เดือน</h3>

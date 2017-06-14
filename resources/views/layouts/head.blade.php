@@ -19,6 +19,7 @@
 <script src="{{ URL::asset('js/modernizr.js')}}"></script>
 <script src="{{ URL::asset('js/jquery.cookie.js')}}"></script>
 <script src="{{ URL::asset('js/screenfull.js')}}"></script>
+<script src="{{ URL::asset('https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js')}}"></script>
 <script>
   $(function () {
     $('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
