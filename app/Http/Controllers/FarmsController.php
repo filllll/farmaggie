@@ -29,6 +29,13 @@ class FarmsController extends Controller
 
     }
 
+    public function viewfarm()
+    {
+
+    	return view('farmaggie.viewfarm');
+
+    }
+
     public function addfarm()
     {
 

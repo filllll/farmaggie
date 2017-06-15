@@ -17,6 +17,11 @@
         <i class="icon-angle-right"></i><i class="icon-angle-down"></i>
       </a>
       <ul>
+      <li>
+          <a class="subnav-text" href="{{ URL::asset('farm/viewfarm')}}">
+            ดูข้อมูลฟาร์ม
+          </a>
+        </li>
         <li>
           <a class="subnav-text" href="{{ URL::asset('farm/addfarm')}}">
             เพิ่มฟาร์มใหม่

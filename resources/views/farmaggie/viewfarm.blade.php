@@ -5,67 +5,15 @@
 
 <body class="dashboard-page">
 			<div class="main-grid">
-				<div class="social grid">
-					<div class="grid-info">
-						<div class="col-md-3 top-comment-grid">
-							<div class="comments likes">
-								<div class="comments-icon">
-									<i class="fa fa-circle-o-notch fa-spin fa-3x" style="color:white"></i>
-								</div>
-								<div class="comments-info likes-info">
-									<h3>2</h3>
-									<a href="#">จำนวนฟาร์ม</a>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div class="col-md-3 top-comment-grid">
-							<div class="comments">
-								<div class="comments-icon">
-									<i class="fa fa-heartbeat fa-3x" style="color:white"></i>
-								</div>
-								<div class="comments-info">
-									<h3>696</h3>
-									<a href="#">จำนวนสุกร</a>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div class="col-md-3 top-comment-grid">
-							<div class="comments tweets">
-								<div class="comments-icon">
-									<i class="fa fa-btc fa-3x" style="color:white"></i>
-								</div>
-								<div class="comments-info tweets-info">
-									<h3>1,960 </h3>
-									<a href="#">ราคาสุกรวันนี้</a>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div class="col-md-3 top-comment-grid">
-							<div class="comments views">
-								<div class="comments-icon">
-									<i class="fa fa-tachometer fa-3x" style="color:white"></i>
-								</div>
-								<div class="comments-info views-info">
-									<h3>ดี</h3>
-									<a href="#">คุณภาพฟาร์ม</a>
-								</div>
-								<div class="clearfix"> </div>
-							</div>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
-
 				<div class="agile-grids">
+            <div class="panel panel-widget forms-panel">
+							<div class="progressbar-heading general-heading">
+								<h4>ฟาร์มที่ #1</h4>
+							</div>
+							<div class="clearfix"> </div>
+
 					<div class="col-md-4 charts-right">
 						<!-- area-chart -->
-						<div class="area-grids">
-							<div class="area-grids-heading">
-								<h3>ข้อมูลสุกรโดยรวม</h3>
-							</div>
 							<div id="graph4"></div>
 							<script>
 								Morris.Donut({
@@ -79,12 +27,13 @@
 								});
 							</script>
 
-						</div>
+
 						<!-- //area-chart -->
+
 					</div>
 
 					<div class="col-md-8 agile-last-left">
-						<div class="agile-last-grid">
+
 							<div class="area-grids-heading">
 								<h3>รายรับรายจ่าย</h3>
 							</div>
@@ -129,14 +78,13 @@
 							}
 						});
 						</script>
-					</div>
+
 					</div>
 				    <div class="clearfix"> </div>
-					</div>
+
 
 			  <div class="agile-bottom-grids">
 				<div class="col-md-12 agile-bottom-right">
-					<div class="agile-bottom-grid">
 						<div class="area-grids-heading">
 							<h3>ยอดการขายสุกรย้อนหลัง 6 เดือน</h3>
 						</div>
@@ -148,7 +96,7 @@
 							{"elapsed": "มีนาคม", "value": 36},
 							{"elapsed": "เมษายน", "value": 79},
 							{"elapsed": "พฤษภาคม", "value": 48},
-							{"elapsed": "มิถานายน", "value": 78}
+							{"elapsed": "มิถุนายน", "value": 78}
 							];
 							Morris.Line({
 								element: 'graph9',
@@ -159,14 +107,13 @@
 								parseTime: false
 							});
 						</script>
-
-					</div>
 				</div>
 			</div>
 			<div class="clearfix"> </div>
 		</div>
+	</div>
 
-
+</div>
 
 	   @include ('layouts.footer')
 	</section>

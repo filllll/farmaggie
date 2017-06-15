@@ -24,6 +24,8 @@ Route::get('/farm/login', 'FarmsController@login');
 
 Route::get('/farm/dashboard', 'FarmsController@dashboard');
 
+Route::get('/farm/viewfarm', 'FarmsController@viewfarm');
+
 Route::get('/farm/addfarm', 'FarmsController@addfarm');
 
 Route::get('/farm/register', 'AccountsController@create');
