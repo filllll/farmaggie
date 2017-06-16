@@ -66,10 +66,10 @@
                                     <ul class="widget widget-usage unstyled span12">
                                         <li>
                                             <p>
-                                                <strong>ภาคกลาง</strong> <span class="pull-right small muted">30%</span>
+                                                <strong>ภาคกลาง</strong> <span class="pull-right small muted">20%</span>
                                             </p>
                                             <div class="progress tight">
-                                                <div class="bar" style="width: 30%;">
+                                                <div class="bar" style="width: 20%;">
                                                 </div>
                                             </div>
                                         </li>
@@ -96,7 +96,7 @@
                                                 <strong>ภาคตะวันตก</strong> <span class="pull-right small muted">40%</span>
                                             </p>
                                             <div class="progress tight">
-                                                <div class="bar bar-danger" style="width: 30%;">
+                                                <div class="bar bar-danger" style="width: 40%;">
                                                 </div>
                                             </div>
                                         </li>
