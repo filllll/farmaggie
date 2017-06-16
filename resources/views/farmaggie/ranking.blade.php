@@ -8,6 +8,8 @@
         <link type="text/css" href="{{ URL::asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
         <link type="text/css" href="{{ URL::asset('bootstrap/css/bootstrap-responsive.min.css')}}" rel="stylesheet">
         <link type="text/css" href="{{ URL::asset('css/theme.css')}}" rel="stylesheet">
+        <link type="text/css" href="{{ URL::asset('css/material.min.css')}}" rel="stylesheet">
+        <link type="text/css" href="{{ URL::asset('https://cdn.datatables.net/1.10.15/css/dataTables.material.min.css')}}" rel="stylesheet">
         <link type="text/css" href="{{ URL::asset('images/icons/css/font-awesome.css')}}" rel="stylesheet">
         <link type="text/css" href="{{ URL::asset('http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600')}}"
             rel='stylesheet'>
@@ -17,8 +19,8 @@
             <div class="navbar-inner">
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                        <i class="icon-reorder shaded"></i></a><a class="brand" href="{{ URL::asset('index.html')}}">Farmaggie Ranking </a>
-                  
+                        <i class="icon-reorder shaded"></i></a><a class="brand" href="{{ URL::asset('farm/ranking')}}"><img src="{{ URL::asset('images/logo.png')}}" alt="" />      Farmaggie Ranking </a>
+
                     <!-- /.nav-collapse -->
                 </div>
             </div>
@@ -60,7 +62,7 @@
                                     </a>
                                 </div>
                                 <div class="btn-box-row row-fluid">
-                            
+
                                     <ul class="widget widget-usage unstyled span12">
                                         <li>
                                             <p>
@@ -94,7 +96,7 @@
                                                 <strong>ภาคตะวันตก</strong> <span class="pull-right small muted">40%</span>
                                             </p>
                                             <div class="progress tight">
-                                                <div class="bar bar-danger" style="width: 40%;">
+                                                <div class="bar bar-danger" style="width: 30%;">
                                                 </div>
                                             </div>
                                         </li>
@@ -111,45 +113,22 @@
                                 </div>
                             </div>
                             <!--/#btn-controls-->
-                        
+
                             <!--/.module-->
-                            <div class="module hide">
-                                <div class="module-head">
-                                    <h3>
-                                        Adjust Budget Range</h3>
-                                </div>
-                                <div class="module-body">
-                                    <div class="form-inline clearfix">
-                                        <a href="#" class="btn pull-right">Update</a>
-                                        <label for="amount">
-                                            Price range:</label>
-                                        &nbsp;
-                                        <input type="text" id="amount" class="input-" />
-                                    </div>
-                                    <hr />
-                                    <div class="slider-range">
-                                    </div>
-                                </div>
-                            </div>
                             <div class="module">
                                 <div class="module-head">
                                     <h3>
                                         อันดับฟาร์มคุณภาพในระบบ Farmaggie</h3>
                                 </div>
                                 <div class="module-body table">
-                                    <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display"
-                                        width="100%">
-                                        <script>
-                                            $(document).ready(function() {
-                                            $('datatable-1').dataTable( {
-                                                "aaSorting": [[ 4, "asc" ]]
-                                            } );
-                                        } );
-                                        </script>
+                                    <table id="farm" class="mdl-data-table" cellspacing="0" width="100%">
                                         <thead>
                                             <tr>
                                                 <th>
                                                     ชื่อฟาร์ม
+                                                </th>
+                                                <th>
+                                                    ภาค
                                                 </th>
                                                 <th>
                                                     จังหวัด
@@ -171,6 +150,9 @@
                                                     สุขเจริญฟาร์ม
                                                 </td>
                                                 <td>
+                                                    ตะวันออกเฉียงเหนือ
+                                                </td>
+                                                <td>
                                                     หนองคาย
                                                 </td>
                                                 <td>
@@ -186,6 +168,9 @@
                                             <tr class="odd gradeX">
                                                 <td>
                                                     ตามรอยพ่อฟาร์ม
+                                                </td>
+                                                <td>
+                                                    กลาง
                                                 </td>
                                                 <td>
                                                     กรุงเทพมหานคร
@@ -204,6 +189,9 @@
                                                     ฟาร์มแอกกี้
                                                 </td>
                                                 <td>
+                                                    กลาง
+                                                </td>
+                                                <td>
                                                     กรุงเทพมหานคร
                                                 </td>
                                                 <td>
@@ -220,13 +208,16 @@
                                                     พุฒิพงษ์ 2541 ฟาร์ม
                                                 </td>
                                                 <td>
+                                                    ตะวันออก
+                                                </td>
+                                                <td>
                                                     จันทบุรี
                                                 </td>
                                                 <td>
                                                     ขนาดกลาง
                                                 </td>
                                                 <td class="center">
-                                                    null
+                                                    GCP, ISO9001	
                                                 </td>
                                                 <td class="center">
                                                     95
@@ -234,6 +225,9 @@
                                             </tr><tr class="odd gradeX">
                                                 <td>
                                                     เจริญโภคภัณฑ์
+                                                </td>
+                                                <td>
+                                                    ตะวันตก
                                                 </td>
                                                 <td>
                                                     ราชบุรี
@@ -252,6 +246,9 @@
                                                     แฮปปี้คนเลี้ยงหมูฟาร์ม
                                                 </td>
                                                 <td>
+                                                    ตะวันตก
+                                                </td>
+                                                <td>
                                                     ราชบุรี
                                                 </td>
                                                 <td>
@@ -266,6 +263,9 @@
                                             </tr><tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มเสรี
+                                                </td>
+                                                <td>
+                                                    ตะวันตก
                                                 </td>
                                                 <td>
                                                     ตาก
@@ -284,6 +284,9 @@
                                                     เพชรบุรีฟาร์ม
                                                 </td>
                                                 <td>
+                                                    กลาง
+                                                </td>
+                                                <td>
                                                     เพชรบุรี
                                                 </td>
                                                 <td>
@@ -298,6 +301,9 @@
                                             </tr><tr class="odd gradeX">
                                                 <td>
                                                     เบทาโกรฟาร์ม
+                                                </td>
+                                                <td>
+                                                    ตะวันตก
                                                 </td>
                                                 <td>
                                                     ราชบุรี
@@ -316,6 +322,9 @@
                                                     อัศนีย์การเกษตร
                                                 </td>
                                                 <td>
+                                                    กลาง
+                                                </td>
+                                                <td>
                                                     นครปฐม
                                                 </td>
                                                 <td>
@@ -332,10 +341,13 @@
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -343,15 +355,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -359,15 +375,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -375,15 +395,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -391,15 +415,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -407,15 +435,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -423,15 +455,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -439,15 +475,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -455,15 +495,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -471,15 +515,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -487,15 +535,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -503,15 +555,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -519,15 +575,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -535,15 +595,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -551,15 +615,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -567,15 +635,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -583,15 +655,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -599,15 +675,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -615,15 +695,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -631,15 +715,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -647,15 +735,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -663,15 +755,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -679,15 +775,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -695,15 +795,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -711,15 +815,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -727,15 +835,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -743,15 +855,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -759,15 +875,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -775,15 +895,19 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
+                                                </tr>
+                                                <tr class="odd gradeX">
                                                 <td>
                                                     ฟาร์มตัวอย่าง
                                                 </td>
                                                 <td>
-                                                    ราชบุรี
+                                                    null
                                                 </td>
                                                 <td>
-                                                    ขนาดกลาง
+                                                    null
+                                                </td>
+                                                <td>
+                                                    null
                                                 </td>
                                                 <td class="center">
                                                     null
@@ -791,343 +915,8 @@
                                                 <td class="center">
                                                     0
                                                 </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr><tr class="odd gradeX">
-                                                <td>
-                                                    ฟาร์มตัวอย่าง
-                                                </td>
-                                                <td>
-                                                    ราชบุรี
-                                                </td>
-                                                <td>
-                                                    ขนาดกลาง
-                                                </td>
-                                                <td class="center">
-                                                    null
-                                                </td>
-                                                <td class="center">
-                                                    0
-                                                </td>
-                                            </tr>
+                                                </tr>
+                                            
                                         </tbody>
                                     </table>
                                 </div>
@@ -1147,12 +936,12 @@
                 <b class="copyright">&copy; 2017 Farmaggie </b>All rights reserved.
             </div>
         </div>
-        <script src="{{ URL::asset('scripts/jquery-1.9.1.min.js')}}" type="text/javascript"></script>
+        <script src="{{ URL::asset('https://code.jquery.com/jquery-1.12.4.js')}}" type="text/javascript"></script>
         <script src="{{ URL::asset('scripts/jquery-ui-1.10.1.custom.min.js')}}" type="text/javascript"></script>
         <script src="{{ URL::asset('bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
         <script src="{{ URL::asset('scripts/flot/jquery.flot.js')}}" type="text/javascript"></script>
         <script src="{{ URL::asset('scripts/flot/jquery.flot.resize.js')}}" type="text/javascript"></script>
-        <script src="{{ URL::asset('scripts/datatables/jquery.dataTables.js')}}" type="text/javascript"></script>
-        <script src="{{ URL::asset('scripts/common.js')}}" type="text/javascript"></script>
-      
+        <script src="{{ URL::asset('scripts/material.js')}}" type="text/javascript"></script>
+        <script src="{{ URL::asset('https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js')}}" type="text/javascript"></script>
+        <script src="{{ URL::asset('https://cdn.datatables.net/1.10.15/js/dataTables.material.min.js')}}" type="text/javascript"></script>
     </body>
