@@ -30,6 +30,8 @@ Route::get('/farm/addfarm', 'FarmsController@addfarm');
 
 Route::get('/farm/register', 'AccountsController@create');
 
+Route::get('/farm/ranking', 'FarmsController@ranking');
+
 Route::post('/farm', 'AccountsController@store')->name('farm');
 Auth::routes();
 

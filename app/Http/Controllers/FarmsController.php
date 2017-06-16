@@ -42,4 +42,11 @@ class FarmsController extends Controller
     	return view('farmaggie.addfarm');
 
     }
+
+     public function ranking()
+    {
+
+    	return view('farmaggie.ranking');
+
+    }
 }
