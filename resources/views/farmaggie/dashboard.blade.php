@@ -49,7 +49,7 @@
 									<i class="fa fa-tachometer fa-3x" style="color:white"></i>
 								</div>
 								<div class="comments-info views-info">
-									<h3>ดี:#1</h3>
+									<a href="{{ URL::asset('farm/ranking') }}"><h3>ดี:#1</h3></a>
 									<a href="#">คุณภาพฟาร์ม</a>
 								</div>
 								<div class="clearfix"> </div>
@@ -67,7 +67,7 @@
 								</div>
 								<div class="comments-info views-info">
 									<h3>1,960</h3>
-									<a href="#">ราคาสุกรมีชีวิตหน้าฟาร์ม</a>
+									<a href="#">ราคาสุกรมีชีวิตหน้าฟาร์ม <br>(ต่อตัว)</a>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -79,7 +79,7 @@
 								</div>
 								<div class="comments-info tweets-info">
 									<h3>748</h3>
-									<a href="#">ราคาอาหารสุกรเล็ก (ต่อ 30 กก.)</a>
+									<a href="#">ราคาอาหารสุกรเล็ก<br> (ต่อ 30 กก.)</a>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -91,7 +91,7 @@
 								</div>
 								<div class="comments-info">
 									<h3>716 </h3>
-									<a href="#">ราคาอาหารสุกรรุ่น (ต่อ 30 กก.)</a>
+									<a href="#">ราคาอาหารสุกรรุ่น <br>(ต่อ 30 กก.)</a>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -103,7 +103,7 @@
 								</div>
 								<div class="comments-info likes-info">
 									<h3>693</h3>
-									<a href="#">ราคาอาหารสุกรเนื้อ (ต่อ 30 กก.)</a>
+									<a href="#">ราคาอาหารสุกรเนื้อ <br>(ต่อ 30 กก.)</a>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -141,7 +141,7 @@
 							<div class="area-grids-heading">
 								<h3>รายรับรายจ่าย</h3>
 							</div>
-							<canvas id="mixed-chart" width="800" height="384"></canvas>
+							<canvas id="mixed-chart" width="800" height="255"></canvas>
 						<script>
 						new Chart(document.getElementById("mixed-chart"), {
 							type: 'bar',

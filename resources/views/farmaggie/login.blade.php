@@ -12,8 +12,8 @@
 
 <!-- //Custom Theme files -->
 <!-- web-font -->
- <link href="https://fonts.googleapis.com/css?family=Roboto|Athiti" rel="stylesheet">
- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+ <link href="{{ URL::asset('https://fonts.googleapis.com/css?family=Roboto|Athiti') }}" rel="stylesheet">
+ <link href="{{ URL::asset('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css') }}" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <!-- //web-font -->
 <!-- pop-up-box -->
 <script src="js/jquery-2.2.3.min.js"></script>
@@ -41,11 +41,11 @@
 		<div class="w3agile-border">
 			<div class="login-main login-agileits">
 				<h1>เข้าสู่ระบบ</h1>
-				<form action="#" method="post">
+				<form action="{{ URL::asset('farm/dashboard') }}">
 					<p>อีเมล</p>
-					<input type="text" placeholder="mail@example.com" name="email" required="">
+					<input type="text" placeholder="mail@example.com" name="email" required="" oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอกอีเมล')">
 					<p>รหัสผ่าน</p>
-					<input type="password" placeholder="รหัสผ่าน" name="password" required="">
+					<input type="password" placeholder="รหัสผ่าน" name="password" required="" oninput="setCustomValidity('')" oninvalid="this.setCustomValidity('โปรดกรอกรหัสผ่าน')">
 					<input type="submit" value="เข้าสู่ระบบ">
 				</form>
         <a class="btn btn-block btn-social btn-facebook" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-facebook']);">

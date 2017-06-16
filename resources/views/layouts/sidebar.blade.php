@@ -62,7 +62,7 @@
     </ul>
     <ul class="logout">
       <li>
-        <a href="farm/login">
+        <a href="login">
           <i class="icon-off nav-icon"></i>
           <span class="nav-text">
             ออกจากระบบ

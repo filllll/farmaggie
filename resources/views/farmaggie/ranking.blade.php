@@ -56,10 +56,10 @@
                                             ยอดผู้ใช้งานเติบโต</p>
                                     </a><a href="#" class="btn-box big span4"><i class="icon-user"></i><b>15 คน</b>
                                         <p class="text-muted">
-                                            มีผู้ใช้ใหม่</p>
+                                            ผู้ใช้ใหม่</p>
                                     </a><a href="#" class="btn-box big span4"><i class="icon-money"></i><b>1,080 ตัว</b>
                                         <p class="text-muted">
-                                            ผู้ใช้ขายหมูไปได้แล้วทั้งหมด</p>
+                                            ผู้ใช้ขายสุกรไปได้แล้วทั้งหมด</p>
                                     </a>
                                 </div>
                                 <div class="btn-box-row row-fluid">

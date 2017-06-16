@@ -33,11 +33,10 @@
 					</div>
 
 					<div class="col-md-8 agile-last-left">
-
 							<div class="area-grids-heading">
 								<h3>รายรับรายจ่าย</h3>
 							</div>
-							<canvas id="mixed-chart" width="800" height="384"></canvas>
+							<canvas id="mixed-chart" width="800" height="255"></canvas>
 						<script>
 						new Chart(document.getElementById("mixed-chart"), {
 							type: 'bar',
@@ -58,12 +57,12 @@
 								}, {
 								label: "รายรับ",
 								type: "bar",
-								backgroundColor: "rgba(0,0,0,0.2)",
+								backgroundColor: "rgba(164, 202, 200, 0.8)",
 								data: [12000,5000,6750,7340,15000,11100],
 								}, {
 								label: "รายจ่าย",
 								type: "bar",
-								backgroundColor: "rgba(0,0,0,0.2)",
+								backgroundColor: "rgba(233, 129, 103, 0.8)",
 								backgroundColorHover: "#3e95cd",
 								data: [20000,15000,7830,2470,1110,9870]
 								}
@@ -79,8 +78,9 @@
 						});
 						</script>
 
-					</div>
+					
 				    <div class="clearfix"> </div>
+					</div>
 
 
 			  <div class="agile-bottom-grids">
