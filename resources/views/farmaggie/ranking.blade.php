@@ -5,6 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Farmaggie Ranking</title>
+        <link rel="icon" href="{{ URL::asset('icon.png')}}">
         <link type="text/css" href="{{ URL::asset('bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
         <link type="text/css" href="{{ URL::asset('bootstrap/css/bootstrap-responsive.min.css')}}" rel="stylesheet">
         <link type="text/css" href="{{ URL::asset('css/theme.css')}}" rel="stylesheet">
@@ -105,7 +106,7 @@
                                                 <strong>ภาคใต้</strong> <span class="pull-right small muted">10%</span>
                                             </p>
                                             <div class="progress tight">
-                                                <div class="bar bar-danger" style="width: 10%;">
+                                                <div class="bar bar-success" style="width: 10%;">
                                                 </div>
                                             </div>
                                         </li>
