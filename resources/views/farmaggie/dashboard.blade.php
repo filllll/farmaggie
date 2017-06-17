@@ -67,7 +67,7 @@
 								</div>
 								<div class="comments-info views-info">
 									<h3>1,960</h3>
-									<a href="#">ราคาสุกรมีชีวิตหน้าฟาร์ม (ต่อตัว)</a>
+									<a href="#">ราคาสุกรมีชีวิตหน้าฟาร์ม <br>(ต่อตัว)</a>
 								</div>
 								<div class="clearfix"> </div>
 							</div>
